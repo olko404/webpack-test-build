@@ -1,12 +1,12 @@
 {
-  "name": "webpack-test-build",
+  "name": "webpack-test",
   "version": "1.0.0",
-  "description": "webpack course",
-  "main": "index.js",
+  "description": "webpack",
+  "private": true,
   "scripts": {
-    "dev": "webpack  --mode development",
-    "webpack": "webpack --mode production",
-    "watch": "webpack --mode development --watch"
+    "build:dev": "webpack  --mode development",
+    "build:prod": "webpack --mode production",
+    "start": "webpack serve --mode development --open"
   },
   "keywords": [
     "js",
@@ -16,11 +16,21 @@
   "author": "olko404 <olko35813@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "clean-webpack-plugin": "^4.0.0",
-    "css-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.3.2",
-    "style-loader": "^3.2.1",
-    "webpack": "^5.52.0",
-    "webpack-cli": "^4.8.0"
+    "clean-webpack-plugin": "4.0.0",
+    "copy-webpack-plugin": "11.0.0",
+    "css-loader": "6.2.0",
+    "css-minimizer-webpack-plugin": "4.0.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "5.3.2",
+    "mini-css-extract-plugin": "2.6.0",
+    "style-loader": "3.2.1",
+    "terser-webpack-plugin": "^5.3.3",
+    "webpack": "5.52.0",
+    "webpack-cli": "4.9.2",
+    "webpack-dev-server": "4.9.1"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "normalize.css": "^8.0.1"
   }
 }

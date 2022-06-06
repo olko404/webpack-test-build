@@ -1,6 +1,7 @@
 import {Post} from './post';
-import styles from './styles/styles.css';
+import * as $ from 'jquery';
+import Logo from './assets/img/logo/logo.svg'
 
-const post =  new Post('webpack Post Title');
+const post = new Post('webpack Post Title', Logo);
 
-console.log('post: ', post.title.toString());
+$('pre').html(post.toString())

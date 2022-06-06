@@ -1,15 +1,15 @@
-
 export class Post {
- constructor(title ) {
-     this.title = title;
-     this.date = new Date();
-    
+    constructor(title, img) {
+        this.title = title;
+        this.date = new Date();
+        this.img = img;
+    }
 
-     function toString() {
-         JSON.stringify({
-             title: this.title,
-             date: this.date.toJSON() 
-         })
-     }
- }
+    toString() {
+        return JSON.stringify({
+            title: this.title,
+            date: this.date.toJSON(),
+            img: this.img
+        }, null, 2)
+    }
 }
